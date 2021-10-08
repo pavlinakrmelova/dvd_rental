@@ -19,8 +19,8 @@ import seaborn as sns
 dvd = pd.DataFrame.from_dict(dvdrental)
 dvd.grp = dvd.groupby('store_id')['amount'].sum().reset_index()
 revenue_by_stores = sns.barplot(x='store_id', y='amount', data= dvd.grp)
-
 ```
+![plot](./dvd_rental/revenue_per_store.png)
 #
 ### 2. Profit Margin - Simply deducted revenue from expenses. Lack of data does not allow to include expenses for building maintenance, for employees, taxes, sales, etc. So here are included just expences from purchase of movies.
 
