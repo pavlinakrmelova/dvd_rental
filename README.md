@@ -10,17 +10,6 @@ INNER JOIN payment ON customer.customer_id = payment.customer_id
 WHERE customer.create_date BETWEEN '2020-01-01' and '2021-01-01'
 group by customer.store_id
 ```
-#### Visualuzations in Python 
-```py
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-dvd = pd.DataFrame.from_dict(dvdrental)
-dvd.grp = dvd.groupby('store_id')['amount'].sum().reset_index()
-revenue_by_stores = sns.barplot(x='store_id', y='amount', data= dvd.grp)
-```
-![plot](/revenue_per_store.PNG)
 #
 ### 2. Profit Margin - Simply deducted revenue from expenses. Lack of data does not allow to include expenses for building maintenance, for employees, taxes, sales, etc. So here are included just expences from purchase of movies.
 
