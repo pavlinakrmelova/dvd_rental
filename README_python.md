@@ -2,7 +2,7 @@
 ### In this case study we test which promotion was the most effective. The data set looks like this: 
 ![plot](https://github.com/pavlinakrmelova/dvd_rental/blob/master/png/ab-testing-describe.PNG)
 
-#### We 
+#### We will run basic funkcions to see the mean, standart deviation and count of promotions
 ```python
 means = df.groupby('Promotion').mean()['SalesInThousands']
 stds = df.groupby('Promotion').std()['SalesInThousands']
