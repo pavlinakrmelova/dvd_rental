@@ -1,6 +1,6 @@
 # AB testing
 
-```py
+```python
 means = df.groupby('Promotion').mean()['SalesInThousands']
 stds = df.groupby('Promotion').std()['SalesInThousands']
 ns = df.groupby('Promotion').count()['SalesInThousands']
