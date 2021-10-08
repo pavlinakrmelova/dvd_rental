@@ -5,7 +5,7 @@ means = df.groupby('Promotion').mean()['SalesInThousands']
 stds = df.groupby('Promotion').std()['SalesInThousands']
 ns = df.groupby('Promotion').count()['SalesInThousands']
 
-![plot](./png/ab-testing-promotion.png)
+![plot](https://github.com/pavlinakrmelova/dvd_rental/blob/master/png/ab-testing-describe.PNG)
 
 
 t, p = stats.ttest_ind(df.loc[df['Promotion'] == 1, 'SalesInThousands'].values,
@@ -14,7 +14,7 @@ t, p = stats.ttest_ind(df.loc[df['Promotion'] == 1, 'SalesInThousands'].values,
 print('t-value = ' +str(t))
 print('p-value = ' +str(p))
 
-![plot2](./png/ab-testing-describe.png)
+![plot2](https://github.com/pavlinakrmelova/dvd_rental/blob/master/png/ab-testing-promotion.PNG)
 
 t, p = stats.ttest_ind(df.loc[df['Promotion'] == 1, 'SalesInThousands'].values, 
                        df.loc[df['Promotion'] == 3, 'SalesInThousands'].values, 
