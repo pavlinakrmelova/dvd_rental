@@ -1,4 +1,4 @@
-# Basic KPI metrics in dvd rental shop
+# Few Basic KPIs metrics in DVD-rental Shop
 #### Data is devided into 15 tables such as inventory, informations about customers, payments, types of movies, etc.
 
 #
